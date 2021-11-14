@@ -43,7 +43,11 @@ function showTemperature(response) {
   let temperature = document.querySelector("#temperature");
   let temperatureValue = response.data.main.temp;
   temperature.innerHTML = `${temperatureValue}°C`;
+  let description = document.querySelector("#description");
+  let descriptionValue = response.data.weather[0].description;
+  description.innerHTML = `${descriptionValue}`;
 }
+
 // search input should change the value of the city
 function search(event) {
   event.preventDefault();
